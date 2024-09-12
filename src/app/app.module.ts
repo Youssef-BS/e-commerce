@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { AuthComponent } from './calcul/auth.component';
 import {ReactiveFormsModule} from '@angular/forms';
-import { InputsComponent } from './inputs/inputs.component'
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthComponent,
-    InputsComponent,
   ],
   imports: [
     BrowserModule ,
@@ -18,4 +16,5 @@ import { InputsComponent } from './inputs/inputs.component'
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
