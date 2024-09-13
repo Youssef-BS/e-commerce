@@ -12,11 +12,4 @@ import { Component, signal , computed} from '@angular/core';
 export class AuthComponent {
   
 
-  lastName = signal('') ;
-  
-  getLastName =computed(this.lastName) ;
-  
-  theLastName () {
-    
-  }
 }

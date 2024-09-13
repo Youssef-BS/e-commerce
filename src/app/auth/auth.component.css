@@ -1,3 +1,20 @@
+
 .authForm {
-    
+    min-height: 400px ;
+    justify-content: center;
+    align-items: center;
+}
+
+.authForm input {
+ height: 40px;
+ width: 80%;
+ margin: auto;
+}
+
+.authForm button {
+    width: 40%;
+}
+p{
+    cursor : pointer ;
+    font-weight: bold;
 }
