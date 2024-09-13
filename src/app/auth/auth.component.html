@@ -1,10 +1,19 @@
-<div class="container h-100 my-4">
-<h1 class="text-center text-primary">Auth</h1>
-<form class="authForm m-auto bg-light d-flex flex-column w-50 h-100 rounded shadow-sm">
-<input type="email" placeholder="Email" class="border rounded m-2 rounded " />
-<input type="password" placeholder="password" class="m-2 rounded border "  />
-<button class="btn btn-primary w-12 m-auto my-2">Login</button>
-<p class="text-center text-primary">Create Account Here !</p>
-<p class="text-center text-primary">Forget password !</p>
-</form>
-</div>
+<form class="authForm m-auto my-4 d-flex flex-column" (ngSubmit)="onSubmit()">
+    <h1 class="text-center text-primary">Login</h1>
+    <hr />
+    <span class="text-start w-100">
+      <p>Login :</p>
+      <hr />
+    </span>
+    <input type="email" placeholder="Email" class="text-start m-2" [(ngModel)]="email" name="email" required />
+    <span class="text-start w-100">
+      <p>Password :</p>
+      <hr />
+    </span>
+    <input type="password" placeholder="Password" class="m-2" [(ngModel)]="password" name="password" required />
+    <button type="submit" class="btn btn-primary m-auto my-2">Login</button>
+    <hr />
+    <p class="action text-center text-primary">Create Account Here!</p>
+    <p class="action text-center text-primary">Forget password?</p>
+  </form>
+  

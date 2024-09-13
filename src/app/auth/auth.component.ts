@@ -1,4 +1,4 @@
-import { Component, signal , computed} from '@angular/core';
+import { Component} from '@angular/core';
 
 
 @Component({
@@ -11,5 +11,13 @@ import { Component, signal , computed} from '@angular/core';
 
 export class AuthComponent {
   
+  email : string = '' ;
+  password : string = '' ;
+
+  onSubmit = () => {
+    console.log(`Email: ${this.email}, Password: ${this.password}`) ;
+    this.email = '' ;
+    this.password = '' ;
+  }
 
 }
