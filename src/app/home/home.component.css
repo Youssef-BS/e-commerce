@@ -1,0 +1,25 @@
+.home {
+  width: 90%;
+  margin: 70px auto;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 400px;
+}
+
+.home .images {
+flex-basis: 40%;
+margin : auto ;
+justify-content: center;
+}
+
+.home img {
+  border-radius: 12px;
+}
+
+.home .description {
+  flex-basis: 40%;
+  margin : auto ;
+  text-align: center;
+  justify-content: center;
+}
+

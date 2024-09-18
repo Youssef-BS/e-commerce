@@ -1,0 +1,19 @@
+.navbar {
+    border-radius: 12px;
+    justify-content: space-around;
+    background-color: #E9EFEC;
+    min-height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar p {
+    margin-left: 12px;
+    cursor : pointer ;
+    font-weight: bold;
+}
+
+.navbar img {
+  border-radius: 50%;
+}
