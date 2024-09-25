@@ -1,19 +1,32 @@
 .navbar {
-    border-radius: 12px;
     justify-content: space-around;
-    background-color: #E9EFEC;
     min-height: 90px;
-    position: fixed;
-    top: 0;
     width: 100%;
 }
 
 .navbar p {
-    margin-left: 12px;
+    margin-left: 20px;
     cursor : pointer ;
     font-weight: bold;
+    color: black;
 }
 
-.navbar img {
-  border-radius: 50%;
+.logo {
+  align-items: center;
+}
+
+.logo input {
+  margin-left: 25px;
+  border-radius: 12px;
+  width: 250px;
+  border: 1px solid black;
+}
+
+
+.about {
+  align-items: center;
+}
+
+.about img {
+  margin-left: 12px;
 }
