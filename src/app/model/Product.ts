@@ -6,4 +6,5 @@ export class Product {
   price : number ;
   available : boolean ;
   categoryId : number ;
+  rating: number;
 }

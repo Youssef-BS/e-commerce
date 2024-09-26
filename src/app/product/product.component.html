@@ -1,17 +1,20 @@
 <div class="container">
-  <h1 class="text-left">New For you</h1>
+  <h1 class="text-left">New For You</h1>
   <div class="product-container d-flex items-center">
-      <div *ngFor="let product of listProduct">
-        <div class="product">
-        <p>{{ product.name }}</p>
-        <img [src]="product.picture" [alt]="product.name" height="150" width="150"/>
-        <p>Likes: {{ product.description }}</p>
-        <p [ngClass]="product.available ? 'text-success' : 'text-danger'">Available: {{ product.available ? 'Yes' : 'No' }}</p>
-        <form>
-          <input type="button" value="see details"/>
-        </form>
-          </div>
+    <div *ngFor="let product of listProduct">
+      <div class="product">
+        <img [src]="product.picture" [alt]="product.name" />
+        <p [ngClass]="product.available ? 'text-success' : 'text-danger'">
+          {{ product.available ? 'In stock' : 'Out of stock' }}
+        </p>
+        <p>{{product.description}}</p>
+        <div class="desc1">
+          <p>{{product.name}}</p>
+          <p>{{product.price}}$</p>
+        </div>
+        <star-rating [(rating)]="product.rating"></star-rating><br/>
+        <input type="button" value="Add to cart" [disabled]="!product.available" />
       </div>
+    </div>
   </div>
 </div>
-
