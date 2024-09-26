@@ -8,8 +8,7 @@
         <p>Likes: {{ product.description }}</p>
         <p [ngClass]="product.available ? 'text-success' : 'text-danger'">Available: {{ product.available ? 'Yes' : 'No' }}</p>
         <form>
-          <input type="button" value="pay" class="btn btn-primary" [disabled]="!product.available"/>
-          <input type="button" value="add to favorite" class="btn btn-primary"/>
+          <input type="button" value="see details"/>
         </form>
           </div>
       </div>
