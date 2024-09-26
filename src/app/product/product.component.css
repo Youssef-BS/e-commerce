@@ -1,5 +1,6 @@
 .container {
   margin: 70px auto;
+  justify-content: center;
 }
 
 .product-container {
@@ -52,4 +53,21 @@
 
 .desc2 {
   display: flex;
+}
+
+.see-more {
+  margin: 70px auto;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  width: 200px;
+  padding: 12px;
+  border-radius: 50px ;
+  transition: 0.5s;
+}
+
+.see-more:hover {
+  background-color: white;
+  color: black;
 }
