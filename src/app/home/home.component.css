@@ -1,17 +1,16 @@
-
 .container {
   margin-top: 70px;
 }
 .home {
-  width: 90%;
-  justify-content: space-around;
+  width: 100%;
+  display: flex;
   align-items: center;
   min-height: 400px;
   flex-wrap: wrap;
 }
 
 .product {
-  width: 270px;
+  width: 200px;
   margin: 20px;
   text-align: center;
   background-color: #f8f9fa;
@@ -20,6 +19,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .product:hover {
@@ -43,7 +43,13 @@ justify-content: center;
   justify-content: center;
 }
 
+form {
+  width: auto;
+  flex-wrap: wrap;
+}
+
 form input {
-  margin-left: 8px;
+  margin: 12px;
+  width: 100%;
 }
 

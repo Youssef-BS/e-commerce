@@ -1,14 +1,14 @@
 <div class="container">
   <h1 class="text-left">New For you</h1>
-  <div class="home container d-flex items-center">
-      <div *ngFor="let category of listProduct">
+  <div class="product-container d-flex items-center">
+      <div *ngFor="let product of listProduct">
         <div class="product">
-        <p>{{ category.name }}</p>
-        <img [src]="category.picture" [alt]="category.name" height="150" width="150"/>
-        <p>Likes: {{ category.description }}</p>
-        <p [ngClass]="category.available ? 'text-success' : 'text-danger'">Available: {{ category.available ? 'Yes' : 'No' }}</p>
+        <p>{{ product.name }}</p>
+        <img [src]="product.picture" [alt]="product.name" height="150" width="150"/>
+        <p>Likes: {{ product.description }}</p>
+        <p [ngClass]="product.available ? 'text-success' : 'text-danger'">Available: {{ product.available ? 'Yes' : 'No' }}</p>
         <form>
-          <input type="button" value="pay" class="btn btn-primary" [disabled]="!category.available"/>
+          <input type="button" value="pay" class="btn btn-primary" [disabled]="!product.available"/>
           <input type="button" value="add to favorite" class="btn btn-primary"/>
         </form>
           </div>

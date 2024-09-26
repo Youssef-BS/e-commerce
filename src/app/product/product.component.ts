@@ -12,15 +12,12 @@ export class ProductComponent implements OnInit {
 
   ngOnInit() {
     this.listProduct = [
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true },
-      // { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', price: 5, available: true },
-      // { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', price: 5, available: true },
-      // { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', price: 5, available: true }
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true , categoryId : 1 },
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true , categoryId : 1},
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: false , categoryId : 1},
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true , categoryId : 1},
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: true , categoryId : 1},
+      { id: 3, name: 'Category 3', picture: 'https://noonclo.com/cdn/shop/files/2-2_1080x.jpg?v=1708502345', description : "test", price: 5, available: false , categoryId : 1},
     ];
   }
 }

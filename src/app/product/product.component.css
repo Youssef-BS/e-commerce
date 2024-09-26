@@ -1,0 +1,32 @@
+.container {
+  margin: 70px auto;
+}
+
+.product-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  flex-wrap: wrap;
+}
+
+.product {
+  width: 270px;
+  margin: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  margin: 12px;
+}
