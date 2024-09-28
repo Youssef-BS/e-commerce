@@ -1,55 +1,123 @@
+
 .container {
   margin-top: 70px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
 }
+
+h1 {
+  font-size: 2.5rem;
+  color: #343a40;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+
 .home {
   width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 400px;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
+
 .product {
-  width: 200px;
+  width: 300px;
   margin: 20px;
   text-align: center;
-  background-color: #f8f9fa;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: 0.5s;
   border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
   overflow: hidden;
+  position: relative;
 }
 
 .product:hover {
-  transform: translateY(-7px);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-.home .images {
-flex-basis: 40%;
-margin : auto ;
-justify-content: center;
-}
-
-.home img {
+.product img {
   border-radius: 12px;
-}
-
-.home .description {
-  flex-basis: 40%;
-  margin : auto ;
-  text-align: center;
-  justify-content: center;
-}
-
-form {
-  width: auto;
-  flex-wrap: wrap;
-}
-
-form input {
-  margin: 12px;
+  transition: transform 0.3s ease-in-out;
   width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
+.product:hover img {
+  transform: scale(1.05);
+}
+
+
+.product p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #495057;
+}
+
+.product .text-success {
+  color: #28a745 !important;
+}
+
+.product .text-danger {
+  color: #dc3545 !important;
+}
+
+form input[type="button"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+form input[disabled] {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.controls .btn {
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls .btn:hover {
+  background-color: #0056b3;
+}
+
+.controls .btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
