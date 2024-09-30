@@ -10,12 +10,13 @@ import { ContainerComponent } from './components/container/container.component';
 import { ProductComponent } from './components/productHome/product.component';
 import { StarRatingComponent } from './components/star-rating/star-rating.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent]
 })
