@@ -3,7 +3,7 @@
   <div class="product-container d-flex items-center">
     <div *ngFor="let product of listProduct">
       <div class="product">
-        <img [src]="product.picture" [alt]="product.name" />
+        <img [src]="product.picture" [alt]="product.name" (click)="productDetails(product.id)"/>
         <p [ngClass]="product.available ? 'text-success' : 'text-danger'">
           {{ product.available ? 'In stock' : 'Out of stock' }}
         </p>

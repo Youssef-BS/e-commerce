@@ -1,0 +1,20 @@
+<div *ngIf="product" class="product container">
+  <div class="product-images">
+    <div class="main-photo"><img [src]="product.picture" [alt]="product.name"/></div>
+  <div *ngFor="let images of product.photos" class="images d-flex">
+      <img [src]="images" [alt]="product.name" class="child"/>
+  </div>
+  </div>
+  <div class="description">
+    <h2>{{ product.name }}</h2>
+    <p [ngClass]="product.available ? 'text-success' : 'text-danger'">
+      {{ product.available ? 'In Stock' : 'Out of Stock' }}
+    </p>
+    <star-rating [(rating)]="product.rating"></star-rating>
+    <p>{{ product.description }}</p>
+    <p><b>{{ product.price }}$</b></p>
+  </div>
+</div>
+<div *ngIf="!product">
+  <p>Product not found.</p>
+</div>

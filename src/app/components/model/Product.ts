@@ -7,4 +7,5 @@ export class Product {
   available : boolean ;
   categoryId : number ;
   rating: number;
+  photos : string[];
 }
