@@ -3,8 +3,8 @@ import { Category } from '../model/category';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.css']
 })
 export class HomeComponent implements OnInit {
   list: string;
