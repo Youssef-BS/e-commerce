@@ -12,11 +12,14 @@ import { StarRatingComponent } from './components/star-rating/star-rating.compon
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
+import { AllProductComponent } from './pages/all-product/all-product.component';
+import { FiltreComponent } from './components/filtre/filtre.component';
+
 
 
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent],
+  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule ],
   providers: [],
   bootstrap: [AppComponent]

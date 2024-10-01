@@ -17,6 +17,10 @@
     transition: 0.3s;
 }
 
+a {
+  text-decoration: none;
+}
+
 .navbar p:hover {
     color: #54C392;
 }
@@ -28,9 +32,12 @@
 .logo input {
   margin-left: 25px;
   border-radius: 12px;
-  width: 250px;
+  width: 300px;
+  height: 40px;
   border: 1px solid black;
+  transition: 0.3s;
 }
+
 
 .about {
   align-items: center;
@@ -39,4 +46,6 @@
 .about img {
   margin-left: 12px;
 }
+
+
 
