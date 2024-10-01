@@ -1,7 +1,7 @@
-<div *ngIf="product" class="product container">
+<div *ngIf="product" class="product container shadow p-5">
   <div class="product-images">
     <div class="main-photo"><img [src]="product.picture" [alt]="product.name"/></div>
-  <div *ngFor="let images of product.photos" class="images d-flex">
+  <div *ngFor="let images of product.photos" class="images">
       <img [src]="images" [alt]="product.name" class="child"/>
   </div>
   </div>
@@ -13,6 +13,7 @@
     <star-rating [(rating)]="product.rating"></star-rating>
     <p>{{ product.description }}</p>
     <p><b>{{ product.price }}$</b></p>
+    <input type="button" value="add to cart" />
   </div>
 </div>
 <div *ngIf="!product">
