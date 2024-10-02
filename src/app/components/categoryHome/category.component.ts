@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../model/category';
+import { Category } from './../model/category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ export class HomeComponent implements OnInit {
   list: string;
   listCategory: Array<Category> = [];
   displayedCategories: Array<Category> = [];
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.listCategory = [
@@ -24,5 +26,11 @@ export class HomeComponent implements OnInit {
 this.displayedCategories=this.listCategory.slice(0 , 6) ;
 
 }
+
+categoryDetails(id: number) {
+  console.log(`Navigating to product with ID: ${id}`);
+  this.router.navigate(['all-product'], { queryParams: { categoryId: id } });
+}
+
 
 }
