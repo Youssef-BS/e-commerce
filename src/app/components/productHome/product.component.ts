@@ -24,7 +24,6 @@ export class ProductComponent implements OnInit {
   }
 
   productDetails(id: number) {
-    console.log(`Navigating to product with ID: ${id}`);
     this.router.navigate(['product' , id]);
   }
 }

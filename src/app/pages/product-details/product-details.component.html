@@ -19,6 +19,6 @@
   </div>
 </div>
 
-<div class="container not-found">
-  <h1 *ngIf="!product" class="text-danger text-center">Product not found !</h1>
+<div *ngIf="!product" class="container not-found alert alert-danger">
+  <h1 class="text-danger text-center">Product not found !</h1>
 </div>

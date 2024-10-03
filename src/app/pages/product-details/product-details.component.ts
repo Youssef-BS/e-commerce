@@ -16,6 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('id'));
 
@@ -29,12 +30,11 @@ export class ProductDetailsComponent implements OnInit {
     ];
 
     this.product = this.listProduct.find(p => p.id === productIdFromRoute);
-    console.log(this.product)
     if (!this.product) {
       console.error(`Product with ID ${productIdFromRoute} not found.`);
     }
 
- if(this.product)
+ if (this.product)
    this.mainPhoto = this.product?.picture ;
   }
 
