@@ -1,11 +1,11 @@
 <div *ngIf="product" class="product container shadow p-5 d-flex">
   <div class="product-images d-flex">
     <div class="second-photo container">
-      <div *ngFor="let images of product.photos" >
-        <img [src]="images" [alt]="product.name" width="80" height="110"/>
+      <div *ngFor="let image of product.photos">
+        <img [src]="image" [alt]="product.name" width="80" height="110" (click)="changeMainPhoto(image)" class="shadow" />
+      </div>
     </div>
-    </div>
-  <img [src]="product.picture" [alt]="product.name"/>
+    <img [src]="mainPhoto" [alt]="product.name" class="shadow"/>
   </div>
   <div class="description m-5">
     <h2>{{ product.name }}</h2>
@@ -15,9 +15,10 @@
       {{ product.available ? 'In Stock' : 'Out of Stock' }}
     </p>
     <star-rating [(rating)]="product.rating"></star-rating>
-    <input type="button" value="add to cart" class="m-3" />
+    <input type="button" value="Add to Cart" class="m-3" />
   </div>
 </div>
-<div *ngIf="!product">
-  <p>Product not found.</p>
+
+<div class="container not-found">
+  <h1 *ngIf="!product" class="text-danger text-center">Product not found !</h1>
 </div>

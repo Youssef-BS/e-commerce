@@ -28,3 +28,8 @@ width: 150px;
 transition: 0.3s;
 margin-top: 80px;
 }
+
+
+.not-found {
+  margin: 140px auto;
+}

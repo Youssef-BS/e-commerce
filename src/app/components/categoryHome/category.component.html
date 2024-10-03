@@ -8,10 +8,9 @@
         <p>Likes: {{ category.nbrLike }}</p>
         <p [ngClass]="category.available ? 'text-success' : 'text-danger'">Available: {{ category.available ? 'Yes' : 'No' }}</p>
         <form class="d-flex w-auto">
-          <input type="button" value="About this category" class="btn btn-primary"/>
+          <input type="button" value="About this category" (click)="categoryDetails(category.id)" class="btn btn-primary"/>
         </form>
           </div>
-          <button class="see-more" (click)="categoryDetails(category.id)">See more</button>
       </div>
   </div>
 </div>

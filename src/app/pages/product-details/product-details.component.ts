@@ -11,14 +11,13 @@ export class ProductDetailsComponent implements OnInit {
 
   product: Product | undefined;
   listProduct: Array<Product>;
+  mainPhoto : string ;
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('id'));
-
-    console.log(productIdFromRoute)
 
     this.listProduct = [
       { id: 1, name: 'jacket', picture: 'https://www.cdiscount.com/pdt2/5/4/2/1/700x700/mp120401542/rw/veste-femme-marque-de-luxe-couleur-unie-courte.jpg', description : "jacket black", price: 270, available: true , categoryId : 1 , rating: 4 , photos : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQByqKw2-dzQXy6n7Vs5u6wGu7VHKsdBSeSYcySLpgtMGjRPlcm","https://www.omoda.be/dw/image/v2/BCCT_PRD/on/demandware.static/-/Sites-omoda-master/default/dw66c0fed2/81/P104681/207766_2.jpg?sw=850&sh=850&sm=fit","https://www.omoda.be/dw/image/v2/BCCT_PRD/on/demandware.static/-/Sites-omoda-master/default/dw211f5212/81/P104681/207766_3.jpg?sw=850&sh=850&sm=fit"]},
@@ -34,5 +33,13 @@ export class ProductDetailsComponent implements OnInit {
     if (!this.product) {
       console.error(`Product with ID ${productIdFromRoute} not found.`);
     }
+
+ if(this.product)
+   this.mainPhoto = this.product?.picture ;
   }
+
+  changeMainPhoto(image: string) {
+    this.mainPhoto = image;
+  }
+
 }
