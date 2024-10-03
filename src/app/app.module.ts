@@ -14,12 +14,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { AllProductComponent } from './pages/all-product/all-product.component';
 import { FiltreComponent } from './components/filtre/filtre.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent],
+  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent, ProductCardComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule ],
   providers: [],
   bootstrap: [AppComponent]

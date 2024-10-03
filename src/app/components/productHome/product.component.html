@@ -1,21 +1,11 @@
 <div class="container">
   <h1 class="text-left">New For You</h1>
   <div class="product-container d-flex items-center">
-    <div *ngFor="let product of listProduct">
-      <div class="product">
-        <img [src]="product.picture" [alt]="product.name" (click)="productDetails(product.id)"/>
-        <p [ngClass]="product.available ? 'text-success' : 'text-danger'">
-          {{ product.available ? 'In stock' : 'Out of stock' }}
-        </p>
-        <p>{{product.description}}</p>
-        <div class="desc1">
-          <p>{{product.name}}</p>
-          <p>{{product.price}}$</p>
-        </div>
-        <star-rating [(rating)]="product.rating"></star-rating><br/>
-        <input type="button" value="Add to cart" [disabled]="!product.available" />
-      </div>
-    </div>
+    <app-product-card
+      *ngFor="let product of listProduct"
+      [product]="product"
+      (onProductClick)="productDetails($event)">
+    </app-product-card>
   </div>
   <button class="see-more">See more</button>
 </div>

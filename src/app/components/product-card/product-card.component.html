@@ -1,0 +1,13 @@
+<div class="product">
+  <img [src]="product.picture" [alt]="product.name" (click)="handleProductClick()"/>
+  <p [ngClass]="product.available ? 'text-success' : 'text-danger'">
+    {{ product.available ? 'In stock' : 'Out of stock' }}
+  </p>
+  <p>{{product.description}}</p>
+  <div class="desc1">
+    <p>{{product.name}}</p>
+    <p>{{product.price}}$</p>
+  </div>
+  <star-rating [(rating)]="product.rating"></star-rating><br/>
+  <input type="button" value="Add to cart" [disabled]="!product.available" />
+</div>
