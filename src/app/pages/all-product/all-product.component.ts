@@ -31,6 +31,4 @@ export class AllProductComponent implements OnInit {
   productDetails(id : number){
     this.router.navigate(["product" , id])
   }
-
-  
 }
