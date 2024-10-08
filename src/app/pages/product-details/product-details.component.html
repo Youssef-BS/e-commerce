@@ -15,7 +15,7 @@
       {{ product.available ? 'In Stock' : 'Out of Stock' }}
     </p>
     <star-rating [(rating)]="product.rating"></star-rating>
-    <input type="button" value="Add to Cart" class="m-3" />
+    <input type="button" value="Add to Cart" class="m-3" (click)="addToCart(product)"/>
   </div>
 </div>
 

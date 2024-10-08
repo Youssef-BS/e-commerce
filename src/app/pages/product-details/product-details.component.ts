@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/components/model/Product';
+import { CartService } from 'src/app/cart.service';
 
 @Component({
   selector: 'app-product-details',
@@ -13,10 +14,10 @@ export class ProductDetailsComponent implements OnInit {
   listProduct: Array<Product>;
   mainPhoto : string ;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute , private cartService : CartService) { }
 
   ngOnInit() {
-    
+
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('id'));
 
@@ -40,6 +41,11 @@ export class ProductDetailsComponent implements OnInit {
 
   changeMainPhoto(image: string) {
     this.mainPhoto = image;
+  }
+
+  addToCart(product: Product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart !');
   }
 
 }

@@ -16,6 +16,7 @@ import { AllProductComponent } from './pages/all-product/all-product.component';
 import { FiltreComponent } from './components/filtre/filtre.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CartComponent } from './components/cart/cart.component';
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -23,7 +24,7 @@ import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent, ProductCardComponent, CartComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule ],
+  imports: [BrowserModule, FormsModule, AppRoutingModule , HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
