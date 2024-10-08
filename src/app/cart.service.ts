@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 export class CartService{
 
 
-items : any = [] ;
+items : Product [] = [] ;
 
 constructor(
   private http: HttpClient
