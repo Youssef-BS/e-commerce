@@ -17,3 +17,13 @@ margin: 140px auto;
 .add-desc input , span {
   margin-left: 12px;
 }
+
+.checkout {
+  width: 100%;
+ text-align: center;
+ margin: 24px auto;
+}
+
+.checkout input {
+  margin: auto 24px;
+}

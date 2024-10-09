@@ -21,6 +21,7 @@ export class CartComponent implements OnInit {
   }
 
   decrementQuantity(){
+    if (this.quantity > 1)
     this.quantity -= 1 ;
   }
 
@@ -30,7 +31,10 @@ export class CartComponent implements OnInit {
 
   removeItem(id : number) {
     this.items = this.cartService.removeItem(id) ;
-    console.log(id);
+  }
+
+  clearItems() {
+    this.items = this.cartService.clearItems() ;
   }
 
 

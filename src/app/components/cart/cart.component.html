@@ -3,7 +3,7 @@
 </div>
 <div *ngIf="items.length > 0">
   <div class="container cart-item" >
-    <div class="card-cart d-flex shadow" *ngFor="let item of items">
+    <div class="card-cart d-flex shadow rounded" *ngFor="let item of items">
       <div><img [src]="item.picture" alt="{{ item.name }}"  width="50" height="50"/></div>
       <div><b>{{ item.name }}</b></div>
       <div>{{ item.description }}</div>
@@ -16,4 +16,9 @@
       </div>
     </div>
   </div>
+  <div class="container checkout">
+    <input type="submit" value="checkout"  class="btn btn-dark"/>
+    <input type="submit" value="clear the cart" class="btn btn-danger" (click)="clearItems()"/>
+  </div>
 </div>
+
