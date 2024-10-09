@@ -1,0 +1,11 @@
+.cart-item {
+display: block;
+margin: 140px auto;
+}
+
+.card-cart {
+  align-items: center;
+  justify-content: space-around;
+  padding: 12px;
+  margin: 24px auto;
+}

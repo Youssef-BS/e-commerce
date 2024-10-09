@@ -1,7 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Product } from './components/model/Product';
-import { HttpClient } from '@angular/common/http';
-
 
 @Injectable({
   providedIn : 'root',
@@ -9,12 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 export class CartService{
 
-
 items : Product [] = [] ;
-
-constructor(
-  private http: HttpClient
-){}
 
 addToCart(product : Product){
 this.items.push(product);
@@ -25,8 +18,11 @@ getItems() {
 }
 
 clearItems(){
-  this.items = [] ;
-  return this.items ;
+  return this.items = [] ;
+}
+
+removeItem(id : number) {
+  return this.items.filter(item => item.id !== id);
 }
 
 }

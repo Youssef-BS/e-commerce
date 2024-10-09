@@ -1,12 +1,19 @@
 <div *ngIf="items.length === 0">
   <p>Your cart is empty.</p>
 </div>
-
 <div *ngIf="items.length > 0">
-  <div class="container cart-item" style="margin-top: 140px;" *ngFor="let item of items">
-    <div>{{ item.name }}</div>
-    <div>{{ item.description }}</div>
-    <div><img [src]="item.picture" alt="{{ item.name }}" /></div>
-    <div>Price: {{ item.price }}</div>
+  <div class="container cart-item" >
+    <div class="card-cart d-flex shadow" *ngFor="let item of items">
+      <div><img [src]="item.picture" alt="{{ item.name }}"  width="50" height="50"/></div>
+      <div><b>{{ item.name }}</b></div>
+      <div>{{ item.description }}</div>
+      <div>{{ item.price | currency }}</div>
+      <div class="add-desc">
+        <!-- <input type="button" value="-" (click)="decrementQuantity(item)">
+        <span>{{ quantity }}</span>
+        <input type="button" value="+" (click)="incrementQuantity(item)"> -->
+        <input type="button" value="Remove" (click)="removeItem(item.id)">
+      </div>
+    </div>
   </div>
 </div>
