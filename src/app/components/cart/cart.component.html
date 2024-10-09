@@ -8,11 +8,11 @@
       <div><b>{{ item.name }}</b></div>
       <div>{{ item.description }}</div>
       <div>{{ item.price | currency }}</div>
-      <div class="add-desc">
-        <!-- <input type="button" value="-" (click)="decrementQuantity(item)">
-        <span>{{ quantity }}</span>
-        <input type="button" value="+" (click)="incrementQuantity(item)"> -->
-        <input type="button" value="Remove" (click)="removeItem(item.id)">
+      <div class="add-desc flex">
+        <input type="button" value="-" (click)="decrementQuantity()" class="btn btn-dark" [disabled]="quantity === 1">
+        <span><b>{{ quantity }}</b></span>
+        <input type="button" value="+" (click)="incrementQuantity()" class="btn btn-dark">
+        <input type="button" value="Remove" (click)="removeItem(item.id)" class="btn btn-danger">
       </div>
     </div>
   </div>

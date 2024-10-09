@@ -9,3 +9,11 @@ margin: 140px auto;
   padding: 12px;
   margin: 24px auto;
 }
+
+.add-desc {
+  justify-content: space-between;
+}
+
+.add-desc input , span {
+  margin-left: 12px;
+}

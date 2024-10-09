@@ -10,7 +10,7 @@ import { Component , OnInit} from '@angular/core';
 export class CartComponent implements OnInit {
 
   items : Product [] =  [] ;
-  quantity : number ;
+  quantity : number = 1 ;
 
   constructor(
     private cartService : CartService
@@ -21,11 +21,11 @@ export class CartComponent implements OnInit {
   }
 
   decrementQuantity(){
-
+    this.quantity -= 1 ;
   }
-  
-  incrementQuantity(){
 
+  incrementQuantity(){
+    this.quantity += 1 ;
   }
 
   removeItem(id : number) {
