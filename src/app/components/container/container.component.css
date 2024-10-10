@@ -3,7 +3,7 @@
   margin:140px auto 70px;
   width: 95%;
   background-image: url("https://images.hdqwalls.com/wallpapers/girl-in-glasses-looking-back-4k-un.jpg");
-  border-radius: 12px;
+  border-radius: 50px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -14,7 +14,7 @@
   z-index: 100000;
   width: auto;
   transition: height 0.5s ease, visibility 0.5s ease;
-  border-radius: 12px;
+  border-radius: 50px;
   height: 100%;
   transition: 0.5s;
   background-image: linear-gradient(to bottom, transparent, black);

@@ -1,7 +1,9 @@
+import { ProductService } from './../../product.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/components/model/Product';
 import { CartService } from 'src/app/cart.service';
+
 
 @Component({
   selector: 'app-product-details',
@@ -14,7 +16,7 @@ export class ProductDetailsComponent implements OnInit {
   listProduct: Array<Product>;
   mainPhoto : string ;
 
-  constructor(private route: ActivatedRoute , private cartService : CartService) { }
+  constructor(private route: ActivatedRoute , private cartService : CartService ,private productService : ProductService) { }
 
   ngOnInit() {
 
@@ -30,10 +32,7 @@ export class ProductDetailsComponent implements OnInit {
       { id: 6, name: 'Category 3', picture: 'https://www.peaksports.tn/29276-medium_default/capuche-i-can-play-vert.jpg', description : "colourful rebel jack sen baseball bomber jacket en rouge", price: 136, available: false , categoryId : 1 , rating: 2 , photos : ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQByqKw2-dzQXy6n7Vs5u6wGu7VHKsdBSeSYcySLpgtMGjRPlcm","https://www.omoda.be/dw/image/v2/BCCT_PRD/on/demandware.static/-/Sites-omoda-master/default/dw66c0fed2/81/P104681/207766_2.jpg?sw=850&sh=850&sm=fit","https://www.omoda.be/dw/image/v2/BCCT_PRD/on/demandware.static/-/Sites-omoda-master/default/dw211f5212/81/P104681/207766_3.jpg?sw=850&sh=850&sm=fit"]},
     ];
 
-    this.product = this.listProduct.find(p => p.id === productIdFromRoute);
-    if (!this.product) {
-      console.error(`Product with ID ${productIdFromRoute} not found.`);
-    }
+    this.product = this.productService.findProductById(productIdFromRoute);
 
  if (this.product)
    this.mainPhoto = this.product?.picture ;
