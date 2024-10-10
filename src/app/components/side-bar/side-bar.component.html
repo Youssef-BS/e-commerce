@@ -1,10 +1,7 @@
 <div class="side-bar shadow">
-<ul>
-  <li>Men</li>
-  <li>Women</li>
-  <li>Kids</li>
-  <li>Sports</li>
-  <li>Accessories</li>
-  <li>Footwear</li>
+<ul *ngIf="category">
+  <li *ngFor="let c of category">
+  <a [routerLink]="">{{c.name}}</a>
+  </li>
 </ul>
 </div>

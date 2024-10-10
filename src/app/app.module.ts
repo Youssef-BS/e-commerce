@@ -17,7 +17,11 @@ import { FiltreComponent } from './components/filtre/filtre.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CartComponent } from './components/cart/cart.component';
 import {HttpClientModule} from '@angular/common/http';
-import { SideBarComponent } from './components/side-bar/side-bar.component'
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { HomePageModule } from './pages/home-page/home-page.module';
+import { ProductDetailsModule } from './pages/product-details/product-details.module';
+import { AllProductModule } from './pages/all-product/all-product.module';
+import { CartModule } from './components/cart/cart.module'
 
 
 
@@ -25,7 +29,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component'
 
 @NgModule({
   declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent, ProductCardComponent, CartComponent, SideBarComponent],
-  imports: [BrowserModule, FormsModule, AppRoutingModule , HttpClientModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule , HttpClientModule, HomePageModule, ProductDetailsModule, AllProductModule, CartModule],
   providers: [],
   bootstrap: [AppComponent]
 })
