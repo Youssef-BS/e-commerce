@@ -16,14 +16,15 @@ import { AllProductComponent } from './pages/all-product/all-product.component';
 import { FiltreComponent } from './components/filtre/filtre.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { CartComponent } from './components/cart/cart.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { SideBarComponent } from './components/side-bar/side-bar.component'
 
 
 
 
 
 @NgModule({
-  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent, ProductCardComponent, CartComponent],
+  declarations: [AppComponent, AuthComponent, HeaderComponent , HomeComponent , FooterComponent, ContainerComponent, ProductComponent, StarRatingComponent, HomePageComponent, ProductDetailsComponent, AllProductComponent, FiltreComponent, ProductCardComponent, CartComponent, SideBarComponent],
   imports: [BrowserModule, FormsModule, AppRoutingModule , HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
