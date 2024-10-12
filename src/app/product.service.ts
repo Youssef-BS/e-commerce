@@ -18,7 +18,7 @@ export class ProductService {
     { id: 6, name: 'Category 3', picture: 'https://www.peaksports.tn/29276-medium_default/capuche-i-can-play-vert.jpg', description : "test", price: 136, available: false , categoryId : 1 , rating: 2 , photos : ["https://www.boysdiffusion.com/29023-large/sweat-capuche-femme-von-dutch.jpg"] },
   ];
 
-  createProduct(product : Product) : void {
+  createProduct(product : Product)  {
    this.listProducts.push(product);
   }
 
