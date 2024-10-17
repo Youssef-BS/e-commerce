@@ -8,6 +8,5 @@
     <p>{{product.name}}</p>
     <p>{{product.price}}$</p>
   </div>
-  <star-rating [(rating)]="product.rating"></star-rating><br/>
   <input type="button" value="Add to cart" [disabled]="!product.available" />
 </div>

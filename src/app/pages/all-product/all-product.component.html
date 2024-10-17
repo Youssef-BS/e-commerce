@@ -1,14 +1,12 @@
 <app-side-bar></app-side-bar>
 <div class="container mt-5">
   <h2 class="text-center mb-4">All Products</h2>
-
   <div *ngIf="listProduct.length > 0; else noProducts" class="d-flex flex-wrap">
-<app-product-card
-*ngFor="let product of listProduct"
-[product] = "product"
-(onProductClick)="productDetails($event)">
->
-</app-product-card>
+    <app-product-card
+      *ngFor="let product of listProduct"
+      [product]="product"
+      (onProductClick)="productDetails(product.id)">
+    </app-product-card>
   </div>
   <ng-template #noProducts>
     <div class="alert alert-warning text-center" role="alert">

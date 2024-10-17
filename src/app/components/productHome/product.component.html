@@ -1,11 +1,11 @@
 <div class="container">
   <h1 class="text-left">New For You</h1>
   <div class="product-container d-flex items-center">
-    <app-product-card
+    <!-- <app-product-card
       *ngFor="let product of listProduct"
       [product]="product"
-      (onProductClick)="productDetails($event)">
-    </app-product-card>
+      (onProductClick)="productDetails(product.id)">
+    </app-product-card> -->
   </div>
   <button class="see-more">See more</button>
 </div>
